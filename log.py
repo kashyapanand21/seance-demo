@@ -3,4 +3,3 @@ def log(msg):
 
 
 # TODO: use logging module
-unused = 1
