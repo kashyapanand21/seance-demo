@@ -1,2 +1,5 @@
 def charge(gateway, amount):
-    return gateway.post(amount)
+    resp = gateway.post(amount)
+    if resp.status == 502:  # gateway timed out
+        resp = gateway.post(amount)
+    return resp
